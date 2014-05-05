@@ -7,7 +7,9 @@
     <PostBuildEvent>
       <Command>xcopy /Y/I /F src\lua.h* "$(OutputPath)\include"
 xcopy /Y/I /F src\luaconf.* "$(OutputPath)\include"
-xcopy /Y/I /F src\lauxlib.h "$(OutputPath)\include"</Command>
+xcopy /Y/I /F src\lauxlib.h "$(OutputPath)\include"
+xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"
+</Command>
       <Message>Copy lua header files.</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
