@@ -81,19 +81,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>lua</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>_$(ProjectName)_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>lua</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>_$(ProjectName)_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>lua</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>_$(ProjectName)_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>lua</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>_$(ProjectName)_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Bin_Debug|Win32'">
     <TargetName>lua</TargetName>

@@ -7,6 +7,10 @@
 *.obj
 ipch/**
 
+# Nuget packages folder
+/packages/**
+
+
 # Compiled source #
 ###################
 *.com
@@ -14,6 +18,9 @@ ipch/**
 *.dll
 *.exe
 *.dylib
+
+#don't ignore stuff in nuget folder.
+!/.nuget/**/*.*
 
 docs/**/*.html
 ## Except in libriaries
@@ -39,6 +46,8 @@ x64/
 Win32/
 _build/
 _install/
+# This is the package build directory.
+/_*_build/**/*
 
 ##next the regular ignoring
 

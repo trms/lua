@@ -2,34 +2,44 @@ nuget {
 	nuspec {
 		id = lua;
 		title: Lua 5.3 work 2;
-		version: 5.3;
-		authors: {Christian Bechette};
-		owners: {TRMS, Christian Bechette};
+		version: 5.3.0002;
+		authors: {coapp, Lua Contributors, Tightrope Media Systems};
+		owners: {Puc-Rio};
+		licenseUrl: "http://www.lua.org/license.html";
+		projectUrl: "http://www.lua.org/";
+		iconUrl: "http://www.lua.org/images/lua-language.gif";
+		releaseNotes: {@"
+* support for integers (64-bit by default)
+* better support for small architectures ('Small Lua' with 32-bit numbers)
+* bitwise operators
+* basic utf-8 library
+* utf-8 escapes in literal strings
+* functions for packing/unpacking numbers
+* userdata can have any Lua value as uservalue
+* strip option in lua_dump/string.dump
+"}; 
 		requireLicenseAcceptance:false;
-		summary:Lua 5.3 work 2 binaries and header files;
-		copyright: Copyright 2014;
-		tags: {native, Lua, TRMS, MediaCircus};
-		description: @"This package contains header file and libraries needed to compile a project that uses Lua 5.3. It also contains runtime DLLs. 
-		";
+		summary: "Lua 5.3 work 2 binaries and header files";
+		copyright: "Copyright 1994–2014 Lua.org, PUC-Rio.";
+		tags: {native, Lua};
+		description: {
+@"Lua is a powerful, fast, lightweight, embeddable scripting language developed by a team at PUC-Rio, the Pontifical Catholic University of Rio de Janeiro in Brazil. Lua is free software used in many products and projects around the world.
+
+Lua's official web site provides complete information about Lua, including an executive summary and updated documentation, especially the reference manual, which may differ slightly from the local copy distributed in this package.
+
+This distribution is for use in Visual Studio 2010 and higher. It installs into the build directory and uses Lua's default WIN32 path for locating lua `require`d packages, which is the root folder where lua is found. It provides the necessary header files and 'lua53.dll' for creating C modules for lua, as well.";}
 	};
 
 	files {
-		include : { Release\include\* };
-		[x64, v100, release]
+		include : { x64\Release\include\* };
+		docs : {doc\**\*};
+		[x64, v100]
         	lib: x64\Release\*.lib;
         	bin: {x64\Release\*.dll, x64\Release\*.exe};
         	pdb: x64\Release\*.pdb;
-		[x64, v100, debug]
-        	lib: x64\Debug\*.lib;
-        	bin: {x64\Debug\*.dll, x64\Debug\*.exe};
-        	pdb: x64\Debug\*.pdb;
-        [win32, v100, release]
-        	lib: Release\*.lib;
-        	bin: {Release\*.dll, Release\*.exe};
-        	pdb: Release\*.pdb;
-		[win32, v100, debug]
-        	lib: Debug\*.lib;
-        	bin: {Debug\*.dll, Debug\*.exe};
-        	pdb: Debug\*.pdb;
+        [win32, v100]
+        	lib: Win32\Release\*.lib;
+        	bin: {Win32\Release\*.dll, Win32\Release\*.exe};
+        	pdb: Win32\Release\*.pdb;
     }
 }
