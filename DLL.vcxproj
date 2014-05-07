@@ -51,38 +51,36 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lua.props" />
     <Import Project="copy_headers.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lua.props" />
     <Import Project="copy_headers.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lua.props" />
     <Import Project="copy_headers.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="lua.props" />
     <Import Project="copy_headers.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <TargetName>lua53</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetName>lua53</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <TargetName>lua53</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>lua53</TargetName>
-    <IntDir>_build\$(TargetName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,12 +91,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /Y/I /F src\lua.h* "$(OutputPath)\include"
-xcopy /Y/I /F src\luaconf.* "$(OutputPath)\include"
-xcopy /Y/I /F src\lauxlib.h "$(OutputPath)\include"
-xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -109,12 +102,7 @@ xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /Y/I /F src\lua.h* "$(OutputPath)\include"
-xcopy /Y/I /F src\luaconf.* "$(OutputPath)\include"
-xcopy /Y/I /F src\lauxlib.h "$(OutputPath)\include"
-xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -129,12 +117,7 @@ xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /Y/I /F src\lua.h* "$(OutputPath)\include"
-xcopy /Y/I /F src\luaconf.* "$(OutputPath)\include"
-xcopy /Y/I /F src\lauxlib.h "$(OutputPath)\include"
-xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -149,12 +132,7 @@ xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy /Y/I /F src\lua.h* "$(OutputPath)\include"
-xcopy /Y/I /F src\luaconf.* "$(OutputPath)\include"
-xcopy /Y/I /F src\lauxlib.h "$(OutputPath)\include"
-xcopy /Y/I /F src\lualib.h "$(OutputPath)\include"</Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include=".\src\lapi.c" />
