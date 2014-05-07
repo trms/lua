@@ -32,7 +32,10 @@ This distribution is for use in Visual Studio 2010 and higher. It installs into 
 
 	files {
 		include : { x64\Release\include\* };
-		docs : {doc\**\*};
+		docs : {
+			#destination = ${d_docs}\lua;
+			doc\**\*
+		};
 		[x64, v100]
         	lib: x64\Release\*.lib;
         	bin: {x64\Release\*.dll, x64\Release\*.exe};
