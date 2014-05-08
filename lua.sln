@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua.REPL", "lua.vcxproj", "{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua.REPL", "lua.vcxproj", "{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0E57878B-8F3D-4121-B720-17EF64D44471} = {0E57878B-8F3D-4121-B720-17EF64D44471}
 	EndProjectSection
@@ -21,14 +21,14 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Debug|Win32.ActiveCfg = Debug|Win32
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Debug|Win32.Build.0 = Debug|Win32
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Debug|x64.ActiveCfg = Debug|x64
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Debug|x64.Build.0 = Debug|x64
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Release|Win32.ActiveCfg = Release|Win32
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Release|Win32.Build.0 = Release|Win32
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Release|x64.ActiveCfg = Release|x64
-		{3CBCFF2E-9447-C53B-46DA-BDAC44CFA234}.Release|x64.Build.0 = Release|x64
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Debug|Win32.Build.0 = Debug|Win32
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Debug|x64.ActiveCfg = Debug|x64
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Debug|x64.Build.0 = Debug|x64
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Release|Win32.ActiveCfg = Release|Win32
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Release|Win32.Build.0 = Release|Win32
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Release|x64.ActiveCfg = Release|x64
+		{23D8AB5A-79A0-7F71-B392-40C157FCBCC8}.Release|x64.Build.0 = Release|x64
 		{0E57878B-8F3D-4121-B720-17EF64D44471}.Debug|Win32.ActiveCfg = Debug|Win32
 		{0E57878B-8F3D-4121-B720-17EF64D44471}.Debug|Win32.Build.0 = Debug|Win32
 		{0E57878B-8F3D-4121-B720-17EF64D44471}.Debug|x64.ActiveCfg = Debug|x64

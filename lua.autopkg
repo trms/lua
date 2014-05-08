@@ -31,7 +31,7 @@ This distribution is for use in Visual Studio 2010 and higher. It installs into 
 	};
 
 	files {
-		include : { x64\Release\include\* };
+		include : { src\lua.h*, src\luaconf.*, src\lauxlib.h*, src\lualib.h* };
 		docs : {
 			#destination = ${d_docs}\lua;
 			doc\**\*
