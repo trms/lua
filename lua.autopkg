@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lua;
 		title: Lua 5.3 work 2;
-		version: 5.3.0002.9;
+		version: 5.3.0002.10;
 		authors: {coapp, Lua Contributors, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
