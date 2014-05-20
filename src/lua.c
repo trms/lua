@@ -530,6 +530,10 @@ int main (int argc, char **argv) {
   result = lua_toboolean(L, -1);  /* get result */
   finalreport(L, status);
   lua_close(L);
+
+  printf("press any key to exit");
+  getch();
+
   return (result && status == LUA_OK) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 
