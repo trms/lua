@@ -131,6 +131,7 @@ static void print_usage (const char *badoption) {
   "  -i       enter interactive mode after executing " LUA_QL("script") "\n"
   "  -l name  require library " LUA_QL("name") "\n"
   "  -v       show version information\n"
+  "  -p		  pause after execution of a script.\n"
   "  -E       ignore environment variables\n"
   "  --       stop handling options\n"
   "  -        stop handling options and execute stdin\n"
@@ -386,10 +387,12 @@ static int handle_script (lua_State *L, char **argv, int n) {
 /* indices of various argument indicators in array args */
 #define has_i		0	/* -i */
 #define has_v		1	/* -v */
-#define has_e		2	/* -e */
-#define has_E		3	/* -E */
+#define has_p		2	/* -p */
+#define has_e		3	/* -e */
+#define has_E		4	/* -E */
 
-#define num_has		4	/* number of 'has_*' */
+
+#define num_has		5	/* number of 'has_*' */
 
 
 static int collectargs (char **argv, int *args) {
@@ -412,6 +415,9 @@ static int collectargs (char **argv, int *args) {
       case 'v':
         noextrachars(argv[i]);
         args[has_v] = 1;
+        break;
+		case 'p':
+        args[has_p] = 1;
         break;
       case 'e':
         args[has_e] = 1;  /* go through */
@@ -478,9 +484,11 @@ static int pmain (lua_State *L) {
   char **argv = (char **)lua_touserdata(L, 2);
   int script;
   int args[num_has];
-  args[has_i] = args[has_v] = args[has_e] = args[has_E] = 0;
+  args[has_i] = args[has_v] = args[has_p] = args[has_e] = args[has_E] = 0;
+  
   if (argv[0] && argv[0][0]) progname = argv[0];
   script = collectargs(argv, args);
+  
   if (script < 0) {  /* invalid arg? */
     print_usage(argv[-script]);
     return 0;
@@ -500,7 +508,13 @@ static int pmain (lua_State *L) {
   /* execute arguments -e and -l */
   if (!runargs(L, argv, (script > 0) ? script : argc)) return 0;
   /* execute main script (if there is one) */
-  if (script && handle_script(L, argv, script) != LUA_OK) return 0;
+  if (script && handle_script(L, argv, script) != LUA_OK) {
+	  if (args[has_p]) {
+		  printf("press any key to exit");
+		  getch();
+	  }
+  }
+	  return 0;
   if (args[has_i])  /* -i option? */
     dotty(L);
   else if (script == 0 && !args[has_e] && !args[has_v]) {  /* no arguments? */
@@ -531,8 +545,7 @@ int main (int argc, char **argv) {
   finalreport(L, status);
   lua_close(L);
 
-  printf("press any key to exit");
-  getch();
+
 
   return (result && status == LUA_OK) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
