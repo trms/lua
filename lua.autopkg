@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lua;
 		title: Lua 5.3 work 2;
-		version: 5.3.0002.13;
+		version: 5.3.0002.16;
 		authors: {coapp, Lua Contributors, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -36,28 +36,46 @@ This distribution is for use in Visual Studio 2010 and higher. It installs into 
 			#destination = ${d_docs}\lua;
 			doc\**\*
 		};
+		
+		mypdb: { 
+            // copies the whole folder tree.
+            #add-all-files : Items.luaPdb;
+            // set the destination in the package itself. 
+			#destination : ${build_root}\${conditionFolder}\luaPdb;
+        };
+		
 		[x64, v100, Release] {
         	lib :  {"x64\Release\*.lib"};
         	bin : {"x64\Release\*.dll", "x64\Release\*.exe"};
-        	// pdb : {"x64\Release\*.pdb"};
+        	mypdb : {"x64\Release\lua53.pdb"};
         };
 
         [win32, v100, Debug] {
         	lib : {"win32\Debug\*.lib"};
         	bin : {"win32\Debug\*.dll", "Win32\Debug\*.exe"};
-        	//pdb += {"win32\Debug\lua53.pdb"};
+        	mypdb : {"win32\Debug\lua53.pdb"};
         };
 
         [x64, v100, Debug] {
         	lib : {"x64\Debug\*.lib"};
         	bin : {"x64\Debug\*.dll", "x64\Debug\*.exe"};
-        	//pdb += {"x64\Debug\lua53.pdb"};
+        	mypdb : {"x64\Debug\lua53.pdb"};
         };
         [win32, v100, Release] {
         	lib : {"Win32\Release\*.lib"};
         	bin : {"Win32\Release\*.dll", "Win32\Release\*.exe"};
-        	// pdb : {Win32\Release\*.pdb};
+        	mypdb : {"Win32\Release\lua53.pdb"};
         };
-
     }
+	
+	targets {
+		AfterBuild {
+			.Copy {
+				DestinationFolder = "$(TargetDir)";
+				SourceFiles = "@(luaPdb)";
+				SkipUnchangedFiles = true;
+				UseHardlinksIfPossible = true;
+			};
+		};
+	}
 }
