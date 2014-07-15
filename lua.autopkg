@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lua;
 		title: Lua 5.3 work 3;
-		version: 5.3.0003.02;
+		version: 5.3.0003.03;
 		authors: {coapp, Lua Contributors, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -51,20 +51,19 @@ This distribution is for use in Visual Studio 2010 and higher. It installs into 
         [win32, v100, Debug] {
         	lib : {"win32\Debug\*.lib"};
         	bin : {"win32\Debug\*.dll", "Win32\Debug\*.exe"};
-        	mypdb : {"win32\Debug\lua53.pdb"};
+        	mypdb : {"win32\Debug\*.pdb"};
         };
 
         [x64, v100, Debug] {
         	lib : {"x64\Debug\*.lib"};
         	bin : {"x64\Debug\*.dll", "x64\Debug\*.exe"};
-        	mypdb : {"x64\Debug\lua53.pdb"};
+        	mypdb : {"x64\Debug\*.pdb"};
         };
         [win32, v100, Release] {
         	lib : {"Win32\Release\*.lib"};
         	bin : {"Win32\Release\*.dll", "Win32\Release\*.exe"};
         	mypdb : {"Win32\Release\*.pdb"};
         };
-
     };
     targets {
 		AfterBuild {
