@@ -1,8 +1,8 @@
 nuget {
 	nuspec {
 		id = lua;
-		title: Lua 5.3 work 3;
-		version: 5.3.0003.03;
+		title: Lua 5.3 RC1;
+		version: 5.3.0004.01;
 		authors: {coapp, Lua Contributors, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -19,7 +19,7 @@ nuget {
 * strip option in lua_dump/string.dump
 "}; 
 		requireLicenseAcceptance:false;
-		summary: "Lua 5.3 work 3 binaries and header files";
+		summary: "Lua 5.3 RC1 binaries and header files";
 		copyright: "Copyright 1994–2014 Lua.org, PUC-Rio.";
 		tags: {native, Lua};
 		description: {
