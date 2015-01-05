@@ -192,12 +192,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\lua.c" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="doc\contents.html" />
     <None Include="doc\manual.html" />
     <None Include="doc\readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\lua.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
