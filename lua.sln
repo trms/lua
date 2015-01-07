@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		lua.autopkg = lua.autopkg
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua.COMPILE", "lua.COMPILE\lua.COMPILE.vcxproj", "{376F8CC9-C9CB-4D59-B739-C78447200F80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -37,6 +39,14 @@ Global
 		{0E57878B-8F3D-4121-B720-17EF64D44471}.Release|Win32.Build.0 = Release|Win32
 		{0E57878B-8F3D-4121-B720-17EF64D44471}.Release|x64.ActiveCfg = Release|x64
 		{0E57878B-8F3D-4121-B720-17EF64D44471}.Release|x64.Build.0 = Release|x64
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Debug|Win32.ActiveCfg = Debug|Win32
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Debug|Win32.Build.0 = Debug|Win32
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Debug|x64.ActiveCfg = Debug|x64
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Debug|x64.Build.0 = Debug|x64
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Release|Win32.ActiveCfg = Release|Win32
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Release|Win32.Build.0 = Release|Win32
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Release|x64.ActiveCfg = Release|x64
+		{376F8CC9-C9CB-4D59-B739-C78447200F80}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
