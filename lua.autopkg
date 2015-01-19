@@ -2,7 +2,7 @@ nuget {
 	nuspec {
 		id = lua;
 		title: Lua 5.3 ;
-		version: 5.3.0.003;
+		version: 5.3.0.005;
 		authors: {coapp, Lua Contributors, Tightrope Media Systems};
 		owners: {Puc-Rio};
 		licenseUrl: "http://www.lua.org/license.html";
@@ -26,6 +26,8 @@ nuget {
 @"Lua is a powerful, fast, lightweight, embeddable scripting language developed by a team at PUC-Rio, the Pontifical Catholic University of Rio de Janeiro in Brazil. Lua is free software used in many products and projects around the world.
 
 Lua's official web site provides complete information about Lua, including an executive summary and updated documentation, especially the reference manual, which may differ slightly from the local copy distributed in this package.
+
+NOTE: `LUA_NOCVTN2S;LUA_NOCVTS2N` are defined in the dll and the luac output. That means that there is no coercion in this build of Lua.
 
 This distribution is for use in Visual Studio 2010 and higher. It installs into the build directory and uses Lua's default WIN32 path for locating lua `require`d packages, which is the root folder where lua is found. It provides the necessary header files and 'lua53.dll' for creating C modules for lua, as well.";}
 	};
@@ -66,13 +68,13 @@ This distribution is for use in Visual Studio 2010 and higher. It installs into 
         };
     };
     targets {
-		AfterBuild {
-			.Copy {
-				DestinationFolder = "$(TargetDir)";
-				SourceFiles = "@(luaPdb)";
-				SkipUnchangedFiles = true;
-				UseHardlinksIfPossible = true;
-			};
-		};
+//		AfterBuild {
+//			.Copy {
+//				DestinationFolder = "$(TargetDir)";
+//				SourceFiles = "@(luaPdb)";
+//				SkipUnchangedFiles = true;
+//				UseHardlinksIfPossible = true;
+//			};
+//		};
 	}
 }

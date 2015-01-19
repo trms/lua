@@ -21,6 +21,9 @@
   <ItemGroup>
     <ClCompile Include="src\one\one.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\luaconf.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0E57878B-8F3D-4121-B720-17EF64D44471}</ProjectGuid>
     <RootNamespace>DLL</RootNamespace>
@@ -89,7 +92,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;LUA_USE_APICHECK;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LUA_NOCVTN2S;LUA_NOCVTS2N;MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;LUA_USE_APICHECK;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -109,7 +112,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;LUA_USE_APICHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LUA_NOCVTN2S;LUA_NOCVTS2N;MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;LUA_USE_APICHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)src\</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -131,7 +134,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LUA_NOCVTN2S;LUA_NOCVTS2N;MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)src\</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
@@ -156,7 +159,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LUA_NOCVTN2S;LUA_NOCVTS2N;MAKE_LIB;LUA_BUILD_AS_DLL;_WIN32;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)src\</AdditionalIncludeDirectories>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
